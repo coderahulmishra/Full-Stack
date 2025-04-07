@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+main{
+    /* border: 1px solid black; */
+    max-width: 1280px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+main nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 40px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+nav ul{
+    display: flex;
+    gap: 20px;
+}
+ul li{
+    list-style: none;
+    cursor: pointer;
+}
+.heroSection{
+    border: 1px solid black;
+    height: 100vh;
+    background-image: url("images/projectBG.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.heroSection a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: rgb(79, 69, 165);
+    text-transform: uppercase;
+}
+.heroSection h1{
+    font-size: 4rem;
+    color: white;
+    font-weight: 700;
+}
+.cardSection{
+    /* border: 1px solid black; */
+    display: grid;
+    justify-items: center;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    grid-auto-flow: row;
+    gap: 10px;
+    margin: 10px 0;
+}
+.cardSection .card{
+    /* border: 1px solid black; */
+    box-shadow: 0 0 3px 0 rgb(109, 102, 102);
+    max-width: 300px;
+    width: 100%;
+    border-radius: 8px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+.cardSection .card:hover{
+    background-color: aquamarine;
+
+}
+
+@media (max-width:610px){
+    nav a{
+        font-size: 1.1rem;
+    }
+    nav ul{
+        gap: 10px;
+    }
+    ul li{
+        font-size: 0.9rem;
+    }
+
+    .heroSection a{
+        font-size: 1.5rem;
+    }
+    .heroSection h1{
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width:480px){
+    nav a{
+        font-size: 1.1rem;
+    }
+    nav ul{
+        gap: 10px;
+    }
+    ul li{
+        font-size: 0.9rem;
+    }
+
+    .heroSection a{
+        font-size: 1rem;
+    }
+    .heroSection h1{
+        font-size: 2.7rem;
+    }
+}
+
+@media (max-width:360px){
+    nav a{
+        font-size: 0.8rem;
+    }
+    nav ul{
+        gap: 8px;
+    }
+    ul li{
+        font-size: 0.6rem;
+    }
+
+    .heroSection a{
+        font-size: 0.8rem;
+        color: white;
+    }
+    .heroSection h1{
+        font-size: 2rem;
+    }
+    .cardSection .card{
+        /* border: 1px solid black; */
+        box-shadow: 0 0 3px 0 rgb(109, 102, 102);
+        width: 180px;
+        border-radius: 8px;
+        height: 240px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+        cursor: pointer;
+    }
+}
